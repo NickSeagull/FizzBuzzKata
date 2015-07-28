@@ -24,4 +24,9 @@ class FizzBuzzSpec extends FlatSpec with MustMatchers {
     fizzBuzz(length) must equal("1\nFizz\n")
   }
 
+  it must "change the divisible by 3 numbers by Buzz" in {
+    val length = 3
+    fizzBuzz(length) must equal("1\nFizz\nBuzz\n")
+  }
+
 }
