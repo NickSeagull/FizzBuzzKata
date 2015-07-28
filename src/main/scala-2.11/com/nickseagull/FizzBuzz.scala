@@ -5,6 +5,11 @@ package com.nickseagull
  */
 object FizzBuzz {
 
-  def fizzBuzz(n: Int): String = "1\n"
+  def numberToFizzBuzz(number: Int): String = number match {
+    case a if number % 2 == 0 => "Fizz"
+    case _                    => number toString
+  }
+
+  def fizzBuzz(n: Int): String = (1 to n map numberToFizzBuzz mkString "\n") + "\n"
 
 }

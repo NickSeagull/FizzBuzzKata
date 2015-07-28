@@ -15,10 +15,13 @@ import com.nickseagull.FizzBuzz._
 class FizzBuzzSpec extends FlatSpec with MustMatchers {
 
   "The FizzBuzz function" must "leave the number 1 as it is" in {
-    val sequence = 1
+    val length = 1
+    fizzBuzz(length) must equal("1\n")
+  }
 
-    fizzBuzz(sequence) must equal("1\n")
-
+  it must "change the divisible by 2 numbers by Fizz" in {
+    val length = 2
+    fizzBuzz(length) must equal("1\nFizz\n")
   }
 
 }
