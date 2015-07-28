@@ -29,4 +29,9 @@ class FizzBuzzSpec extends FlatSpec with MustMatchers {
     fizzBuzz(length) must equal("1\nFizz\nBuzz\n")
   }
 
+  it must "change the numbers by FizzBuzz if they meet the 2 conditions" in {
+    val length = 6
+    fizzBuzz(length) must equal("1\nFizz\nBuzz\nFizz\n5\nFizzBuzz\n")
+  }
+
 }
