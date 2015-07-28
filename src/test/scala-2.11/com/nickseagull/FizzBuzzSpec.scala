@@ -1,6 +1,8 @@
 package com.nickseagull
 
-import org.scalatest._
+import org.scalatest.FlatSpec
+import org.scalatest.matchers.MustMatchers
+import com.nickseagull.FizzBuzz._
 
 /*
   TODO: Return a string made up from a sequence of numbers with the following conditions:
@@ -10,7 +12,13 @@ import org.scalatest._
     - If not, the number will stay the same
  */
 
-class FizzBuzzSpec extends FlatSpec with ShouldMatchers {
+class FizzBuzzSpec extends FlatSpec with MustMatchers {
 
+  "The FizzBuzz function" must "leave the number 1 as it is" in {
+    val sequence = 1
+
+    fizzBuzz(sequence) must equal("1\n")
+
+  }
 
 }
